@@ -58,17 +58,4 @@ Cargo.lock
 # Ignore all local history of files
 .history
 
-### Web ###
-*.asp
-*.cer
-*.csr
-*.css
-*.htm
-*.html
-*.js
-*.jsp
-*.php
-*.rss
-*.xhtml
-
 # End of https://www.toptal.com/developers/gitignore/api/rust,purescript,web,haskell,visualstudiocode
