@@ -1,0 +1,36 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+}
+
+p {
+    color: blue;
+}
+
+.button {
+    background-color: red;
+    padding: 2px 7px;
+    border-radius: 4px;
+    margin: 20px 4px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.button:hover {
+    background-color: firebrick;
+}
+
+canvas {
+    border: solid 2px black;
+}
