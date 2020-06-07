@@ -18,7 +18,9 @@ function mouseMoveHandler(e) {
     var relY = e.clientY - canvas.offsetTop
 
     if (pressed) {
+        ctx.fillStyle = "#" + ((Math.pow(16, 6) + relX * 100 + relY * 100) % Math.pow(16, 6)).toString(16);
         ctx.fillRect(relX - square / 2, relY - square / 2, square, square);
+
     }
 
 }
