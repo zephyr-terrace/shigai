@@ -61,15 +61,13 @@ mod router {
         } else {
             route_error("400", stream);
         }
-
-        println!("ROUTING to index");
     }
 
     fn route_general_path(mut route: String, mut stream: TcpStream) {
         if route.ends_with(".html") {
             route = format!("/html{}", route);
         }
-        println!("route: {}", route);
+
         if let Ok(contents) = fs::read_to_string(format!("{}{}", crate::SRC_ROOT, route)) {
             let response = format!("HTTP/1.1 200 OK \r\n\r\n{}", contents);
             stream.write_all(response.as_bytes()).unwrap();
@@ -82,7 +80,6 @@ mod router {
     fn route_error(errcode: &str, mut stream: TcpStream) {
         let response = format!("HTTP/1.1 {} UnknownResource \r\n\r\n", errcode);
 
-        println!("returning error: {}", errcode);
         stream.write_all(response.as_bytes()).unwrap();
         stream.flush().unwrap();
     }
